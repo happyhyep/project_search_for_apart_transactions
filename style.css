@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.find_location .dep1 {
+    font-size: 0;
+}
+.find_location .dep1 > li {
+    display: inline-block;
+    width: 100px;
+    background: #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+.find_location .dep2 {
+    display: none;
+}
