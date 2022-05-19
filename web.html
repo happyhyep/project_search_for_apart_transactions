@@ -28,6 +28,7 @@
         const jeju = ['시/군/구','서귀포시','제주시'];
         let temp = []; 
 
+
         const _do = document.getElementById('do').value; //첫 번째 select의 value를 가져옴 -> 이의 변화에 따라 다른 select에 영향을 줌.
         const _si = document.getElementById('si'); //영향을 받을 si select의 위치를 갖고옴.
 
@@ -94,6 +95,41 @@
           //if(_si.value != null){print();}
         }
       };
+      const onChangeHandler2 = () => {
+        const seoul1 = ['읍/면/동', '개포동','논현동','대치동','도곡동','삼성동','세곡동','수서동','신사동','압구정동','역삼동','율현동','일원동','자곡동','청담동'];
+        const seoul2 = ['읍/면/동','강일동','고덕동','길동','둔촌동','명일동','상일동','성내동','암사동','천호동'];
+        const seoul3 = ['읍/면/동','미아동','번동','수유동','우이동'];
+        const seoul4 = ['읍/면/동','가양동','개화동','공항동','과해동','내발산동','등촌동','마곡동','방화동','염창동','오곡동','오쇠동','외발산동','화곡동'];
+
+        let temp2 = [];
+
+        const __si = document.getElementById('si').value; //첫 번째 select의 value를 가져옴 -> 이의 변화에 따라 다른 select에 영향을 줌.
+        const _dong = document.getElementById('dong'); //영향을 받을 si select의 위치를 갖고옴.
+
+        if (__si == "강남구") {
+          temp2 = seoul1;
+        } else if (__si == "강동구") {
+          temp2 = seoul2;
+        } else if (__si == "강북구") {
+          temp2 = seoul3;
+        } else if (__si == "강서구") {
+          temp2 = seoul3;
+        }
+
+
+        //삭제 부분
+        while(_dong.hasChildNodes())
+        {
+          _dong.removeChild(_dong.firstChild);
+        }
+        
+        for (let idx = 0; idx < temp2.length; idx++) {
+          const newOption = document.createElement('option'); 
+          newOption.innerHTML = temp2[idx]; 
+          _dong.appendChild(newOption); 
+        }
+      };
+
     </script>
   </head>
   <body>
@@ -121,10 +157,13 @@
         <option>제주특별자치도</option>
       </select>
 
-      <select id="si">
+      <select id="si" onchange="onChangeHandler2()">
         <option>시/군/구</option>
       </select>
 
+      <select id="dong">
+        <option>읍/면/동</option>
+      </select>
 
     <button onclick="printCountry()">검색</button>
     <div id="new"></div>
