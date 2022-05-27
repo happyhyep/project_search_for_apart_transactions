@@ -13,7 +13,7 @@
         const gwangju = ['시/군/구','광산구','남구','동구','북구','서구'];
         const daejeon = ['시/군/구','대덕구','동구','서구','유성구','중구'];
         const ulsan = ['시/군/구','남구','동구','북구','울주군','중구'];
-        const sejong = ['시/군/구'];
+        const sejong = ['시/군/구', '--선택--'];
         const gyoungi = ['시/군/구','가평군','고양시 덕양구','고양시 일산동구','고양시 일산서구','과천시','광명시','광주시','구리시','군포시','김포시','남양주시','동두천시','부천시','성남시 분당구',
         '성남시 수정구','성남시 중원구','수원시 권선구','수원시 영통구','수원시 장안구','수원시 팔달구','시흥시','안산시 단원구','안산시 상록구','안성시','안양시 동안구','안양시 만안구','양주시','양평군','여주시','연천군','오산시','용인시 기흥구',
       '용인시 수지구','용인시 처인구','의왕시','의정부시','이천시','파주시','평택시','포천시','하남시','화성시'];
@@ -51,9 +51,9 @@
         else if (_do == "울산광역시") {
           temp = ulsan;
         }
-        else if (_do == "세종특별자치시") {
+         else if (_do == "세종특별자치시") {
           temp = sejong;
-        }
+         }
         else if (_do == "경기도") {
           temp = gyoungi;
         }
@@ -204,179 +204,190 @@
        const ulsan4 = ['읍/면/동','두동면','두서면','범서읍','삼납읍','삼동면','상북면','서생면','언양읍','온산읍','온양읍','웅촌면','청량읍'];
        const ulsan5 = ['읍/면/동','교동','남외동','다운동','동동','반구동','복산동','북정동','서동','성남동','성안동','약사동','옥교동','우정동','유곡동','장현동','태화동','학산동','학성동'];
 
+       const sejong1 = ['읍/면/동','가람동','고운동','금남면','나성동','다정동','대평동','도담동','반곡동','보람동','부강면','산울동','새롬동','소담동','소정면','아름동','어진동','연기면','연동면','연서면','장군면','전동면','전의면','조치원읍','종촌동','집현동','한솔동','합강동','해밀동'];
+
+
+
         let temp2 = [];
 
+        const __do = document.getElementById('do').value;
         const __si = document.getElementById('si').value; 
         const _dong = document.getElementById('dong'); 
 
         //서울특별시
-          if (__si == "강남구") {
+          if ((__do == "서울특별시") && (__si == "강남구")) {
             temp2 = seoul1;
-          } else if (__si == "강동구") {
+          } else if (__do == "서울특별시" && __si == "강동구") {
             temp2 = seoul2;
-          } else if (__si == "강북구") {
+          } else if (__do == "서울특별시" && __si == "강북구") {
             temp2 = seoul3;
-          } else if (__si == "강서구") {
+          } else if (__do == "서울특별시" && __si == "강서구") {
             temp2 = seoul4;
-          } else if (__si == "관악구") {
+          } else if (__do == "서울특별시" && __si == "관악구") {
             temp2 = seoul5;
-          } else if (__si == "광진구") {
+          } else if (__do == "서울특별시" && __si == "광진구") {
             temp2 = seoul6;
-          } else if (__si == "구로구") {
+          } else if (__do == "서울특별시" && __si == "구로구") {
             temp2 = seoul7;
-          } else if (__si == "금천구") {
+          } else if (__do == "서울특별시" && __si == "금천구") {
             temp2 = seoul8;
-          } else if (__si == "노원구") {
+          } else if (__do == "서울특별시" && __si == "노원구") {
             temp2 = seoul9;
-          } else if (__si == "도봉구") {
+          } else if (__do == "서울특별시" && __si == "도봉구") {
             temp2 = seoul10;
-          } else if (__si == "동대문구") {
+          } else if (__do == "서울특별시" && __si == "동대문구") {
             temp2 = seoul11;
-          } else if (__si == "동작구") {
+          } else if (__do == "서울특별시" && __si == "동작구") {
             temp2 = seoul12;
-          } else if (__si == "마포구") {
+          } else if (__do == "서울특별시" && __si == "마포구") {
             temp2 = seoul13;
-          } else if (__si == "서대문구") {
+          } else if (__do == "서울특별시" && __si == "서대문구") {
             temp2 = seoul14;
-          } else if (__si == "서초구") {
+          } else if (__do == "서울특별시" && __si == "서초구") {
             temp2 = seoul15;
-          } else if (__si == "성동구") {
+          } else if (__do == "서울특별시" && __si == "성동구") {
             temp2 = seoul16;
-          } else if (__si == "성북구") {
+          } else if (__do == "서울특별시" && __si == "성북구") {
             temp2 = seoul17;
-          } else if (__si == "송파구") {
+          } else if (__do == "서울특별시" && __si == "송파구") {
             temp2 = seoul18;
-          } else if (__si == "양천구") {
+          } else if (__do == "서울특별시" && __si == "양천구") {
             temp2 = seoul19;
-          } else if (__si == "영등포구") {
+          } else if (__do == "서울특별시" && __si == "영등포구") {
             temp2 = seoul20;
-          } else if (__si == "용산구") {
+          } else if (__do == "서울특별시" && __si == "용산구") {
             temp2 = seoul21;
-          } else if (__si == "은평구") {
+          } else if (__do == "서울특별시" && __si == "은평구") {
             temp2 = seoul22;
-          } else if (__si == "종로구") {
+          } else if (__do == "서울특별시" && __si == "종로구") {
             temp2 = seoul23;
-          } else if (__si == "중구") {
+          } else if (__do == "서울특별시" && __si == "중구") {
             temp2 = seoul24;
-          } else if (__si == "중랑구") {
+          } else if (__do == "서울특별시" && __si == "중랑구") {
             temp2 = seoul25;
           }
 
         //부산광역시
-        if (__si == "강서구") {
+        if (__do == "부산광역시" && __si == "강서구") {
           temp2 = busan1;
-        } else if (__si == "금정구") {
+        } else if (__do == "부산광역시" && __si == "금정구") {
           temp2 = busan2;
-        } else if (__si == "기장군") {
+        } else if (__do == "부산광역시" && __si == "기장군") {
           temp2 = busan3;
-        } else if (__si == "남구") {
+        } else if (__do == "부산광역시" && __si == "남구") {
           temp2 = busan4;
-        } else if (__si == "동구") {
+        } else if (__do == "부산광역시" && __si == "동구") {
           temp2 = busan5;
-        } else if (__si == "동래구") {
+        } else if (__do == "부산광역시" && __si == "동래구") {
           temp2 = busan6;
-        } else if (__si == "부산진구") {
+        } else if (__do == "부산광역시" && __si == "부산진구") {
           temp2 = busan7;
-        } else if (__si == "북구") {
+        } else if (__do == "부산광역시" && __si == "북구") {
           temp2 = busan8;
-        } else if (__si == "사상구") {
+        } else if (__do == "부산광역시" && __si == "사상구") {
           temp2 = busan9;
-        } else if (__si == "사하구") {
+        } else if (__do == "부산광역시" && __si == "사하구") {
           temp2 = busan10;
-        } else if (__si == "서구") {
+        } else if (__do == "부산광역시" && __si == "서구") {
           temp2 = busan11;
-        } else if (__si == "수영구") {
+        } else if (__do == "부산광역시" && __si == "수영구") {
           temp2 = busan12;
-        } else if (__si == "연제구") {
+        } else if (__do == "부산광역시" && __si == "연제구") {
           temp2 = busan13;
-        } else if (__si == "영도구") {
+        } else if (__do == "부산광역시" && __si == "영도구") {
           temp2 = busan14;
-        } else if (__si == "중구") {
+        } else if (__do == "부산광역시" && __si == "중구") {
           temp2 = busan15;
-        } else if (__si == "해운대구") {
+        } else if (__do == "부산광역시" && __si == "해운대구") {
           temp2 = busan16;
         }
 
         //대구광역시
-         if (__si == "남구") {
+         if (__do == "대구광역시" && __si == "남구") {
           temp2 = daegu1;
-        } else if (__si == "달서구") {
+        } else if (__do == "대구광역시" && __si == "달서구") {
           temp2 = daegu2;
-        } else if (__si == "달성군") {
+        } else if (__do == "대구광역시" && __si == "달성군") {
           temp2 = daegu3;
-        } else if (__si == "동구") {
+        } else if (__do == "대구광역시" && __si == "동구") {
           temp2 = daegu4;
-        } else if (__si == "북구") {
+        } else if (__do == "대구광역시" && __si == "북구") {
           temp2 = daegu5;
-        } else if (__si == "서구") {
+        } else if (__do == "대구광역시" && __si == "서구") {
           temp2 = daegu6;
-        } else if (__si == "수성구") {
+        } else if (__do == "대구광역시" && __si == "수성구") {
           temp2 = daegu7; 
-        } else if (__si == "중구") {
+        } else if (__do == "대구광역시" && __si == "중구") {
           temp2 = daegu8;
         }
 
         //인천광역시
-        if (__si == "강화군") {
+        if (__do == "인천광역시" && __si == "강화군") {
           temp2 = incheon1;
-        } else if (__si == "계양구") {
+        } else if (__do == "인천광역시" && __si == "계양구") {
           temp2 = incheon2;
-        } else if (__si == "남동구") {
+        } else if (__do == "인천광역시" && __si == "남동구") {
           temp2 = incheon3;
-        } else if (__si == "동구") {
+        } else if (__do == "인천광역시" && __si == "동구") {
           temp2 = incheon4;
-        } else if (__si == "미추홀구") {
+        } else if (__do == "인천광역시" && __si == "미추홀구") {
           temp2 = incheon5;
-        } else if (__si == "부평구") {
+        } else if (__do == "인천광역시" && __si == "부평구") {
           temp2 = incheon6;
-        } else if (__si == "서구") {
+        } else if (__do == "인천광역시" && __si == "서구") {
           temp2 = incheon7; 
-        } else if (__si == "연수구") {
+        } else if (__do == "인천광역시" && __si == "연수구") {
           temp2 = incheon8;
-        } else if (__si == "옹진군") {
+        } else if (__do == "인천광역시" && __si == "옹진군") {
           temp2 = incheon8; 
-        } else if (__si == "중구") {
+        } else if (__do == "인천광역시" && __si == "중구") {
           temp2 = incheon9;
         }
 
          //광주광역시
-         if (__si == "광산구") {
+         if (__do == "광주광역시" && __si == "광산구") {
           temp2 = gwangju1;
-        } else if (__si == "남구") {
+        } else if (__do == "광주광역시" && __si == "남구") {
           temp2 = gwangju2;
-        } else if (__si == "동구") {
+        } else if (__do == "광주광역시" && __si == "동구") {
           temp2 = gwangju3;
-        } else if (__si == "북구") {
+        } else if (__do == "광주광역시" && __si == "북구") {
           temp2 = gwangju4;
-        } else if (__si == "서구") {
+        } else if (__do == "광주광역시" && __si == "서구") {
           temp2 = gwangju5;
         }
 
         //대전광역시
-        if (__si == "대덕구") {
+        if (__do == "대전광역시" && __si == "대덕구") {
           temp2 = daejeon1;
-        } else if (__si == "동구") {
+        } else if (__do == "대전광역시" && __si == "동구") {
           temp2 = daejeon2;
-        } else if (__si == "서구") {
+        } else if (__do == "대전광역시" && __si == "서구") {
           temp2 = daejeon3;
-        } else if (__si == "유성구") {
+        } else if (__do == "대전광역시" && __si == "유성구") {
           temp2 = daejeon4;
-        } else if (__si == "중구") {
+        } else if (__do == "대전광역시" && __si == "중구") {
           temp2 = daejeon5;
         }
 
          //울산광역시
-         if (__si == "남구") {
+         if (__do == "울산광역시" && __si == "남구") {
           temp2 = ulsan1;
-        } else if (__si == "동구") {
+        } else if (__do == "울산광역시" && __si == "동구") {
           temp2 = ulsan2;
-        } else if (__si == "북구") {
+        } else if (__do == "울산광역시" && __si == "북구") {
           temp2 = ulsan3;
-        } else if (__si == "울주군") {
+        } else if (__do == "울산광역시" && __si == "울주군") {
           temp2 = ulsan4;
-        } else if (__si == "중구") {
+        } else if (__do == "울산광역시" && __si == "중구") {
           temp2 = ulsan5;
         }
+
+        //세종특별자치시
+        if (__do == "세종특별자치시" && __si == "--선택--") {
+          temp2 = sejong1;
+        }
+
 
 
 
@@ -399,7 +410,7 @@
 
 
     <div>
-      <select id="do" onchange="onChangeHandler()" > <!--on change : 이벤트 발생했을 때 선택할 내용-->
+      <select id="do" onchange="onChangeHandler()" onchange="onChangeHandler2()" > <!--on change : 이벤트 발생했을 때 선택할 내용-->
         <option>시/도</option>
         <option>서울특별시</option>
         <option>부산광역시</option>
@@ -420,7 +431,7 @@
         <option>제주특별자치도</option>
       </select>
 
-      <select id="si" onchange="onChangeHandler2()">
+      <select id="si" onchange="onChangeHandler2()" onchange="onChangeHandler()">
         <option>시/군/구</option>
       </select>
 
