@@ -1,26 +1,31 @@
-*{
-    margin:0;
-    padding: 0;
-}
-ul, li {
-    list-style: none;
-
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-.find_location .dep1 {
-    font-size: 0;
-}
-.find_location .dep1 > li {
-    display: inline-block;
-    width: 100px;
-    background: #ddd;
+h1, p {
     text-align: center;
-    font-size: 16px;
+  }
+  .center {
+    text-align: center;
+  }
+  .right {
+    text-align: right;
+  }
+  .end {
+    text-align: end;
+  }
+
+div#bottom_center{
+    /*display: flex;*/
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    padding: -50%;
+    margin: 0 auto;
 }
 
-.find_location .dep2 {
-    display: none;
+.no_dot_list{
+    list-style: none;
+    padding-left: 0px;
+}
+
+body{
+    overflow:hidden;
+    height: 100%;
 }

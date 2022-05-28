@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>아파트 매매 실거래가 검색 웹페이지</title>
+
     <link rel="stylesheet" href="style.css">
     <script>
       const onChangeHandler = () => {
@@ -407,10 +408,14 @@
     </script>
   </head>
   <body>
+    <section id="첫화면">
+      <h1>아파트 매매 실거래가 검색</h1>
+      <p>아래에서 원하는 지역을 선택 후, 검색해주세요.</p>
 
+    </section>
 
-    <div>
-      <select id="do" onchange="onChangeHandler()" onchange="onChangeHandler2()" > <!--on change : 이벤트 발생했을 때 선택할 내용-->
+    <div class="center">
+      <select id="do" onchange="onChangeHandler()" onchange="onChangeHandler2()" style="width : 150px; height: 30px; text-align: center; font-size: 100% ;"> <!--on change : 이벤트 발생했을 때 선택할 내용-->
         <option>시/도</option>
         <option>서울특별시</option>
         <option>부산광역시</option>
@@ -431,16 +436,40 @@
         <option>제주특별자치도</option>
       </select>
 
-      <select id="si" onchange="onChangeHandler2()" onchange="onChangeHandler()">
+      <select id="si" onchange="onChangeHandler2()" onchange="onChangeHandler()" style="width : 150px; height: 30px; text-align: center; font-size: 100% ;">
         <option>시/군/구</option>
       </select>
 
-      <select id="dong">
+      <select id="dong" style="width : 150px; height: 30px; text-align: center; font-size: 100% ;">
         <option>읍/면/동</option>
       </select>
 
-    <button onclick="printCountry()">검색</button>
+    <button onclick="printCountry()" style="width : 50px; height: 30px; text-align: center; font-size: 100% ;">검색</button>
     <div id="new"></div>
+    </div>
+
+    <div class ="실거래가확인" id="bottom_center">
+    <fieldset>
+      <legend style="text-align:center">실거래가 확인</legend>
+      <p>(api 들어갈 부분)</p>
+    </fieldset>
+    </div>
+
+    <div class="bottom" style="width: 1000px;" id="bottom_center">
+      <fieldset style="text-align:center">
+        <legend class="center">제작</legend>
+       <ul>
+        <li class="center no_dot_list">
+          <a>경희대학교 컴퓨터공학과 전공수업 오픈소스SW프로그래밍 프로젝트</a>
+        </li>
+        <li class="end no_dot_list">
+          <a>2021105641 정혜인</a>
+        </li>
+        <li class="end no_dot_list">
+          <a>2021105609 손수민</a>
+        </li>
+       </ul>
+      </fieldset>
     </div>
   </body>
 </html>
