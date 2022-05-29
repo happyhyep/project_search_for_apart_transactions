@@ -279,6 +279,41 @@
         const gangwon18 = ['읍/면/동','갑천면','강림면','공근면','둔내면','서원면','안흥면','우천면','청일면','횡성읍'];
 
 
+        const northchungcheong1 = ['읍/면/동','감물면','괴산읍','문광면','불정면','사리면','소수면','연풍면','장연면','청안면','청천면','칠성면'];
+        const northchungcheong2 = ['읍/면/동','가곡면','단성면','단양읍','대강면','매포읍','어상천면','영춘면','적성면'];
+        const northchungcheong3 = ['읍/면/동','내북면','마로면','보은읍','산외면','삼승면','속리산면','수한면','장안면','탄부면','회남면','회인면'];
+        const northchungcheong4 = ['읍/면/동','매곡면','상촌면','심천면','양강면','양산면','영동읍','용산면','용화면','추풍령면','학산면','황간면'];
+        const northchungcheong5 = ['읍/면/동','군북면','군서면','동이면','안남면','안내면','옥천읍','이원면','청산면','청성면'];
+        const northchungcheong6 = ['읍/면/동','감곡면','금왕읍','대소면','맹동면','삼성면','생극면','소이면','원남면','음성읍'];
+        const northchungcheong7 = ['읍/면/동','강제동','고명동','고암동','교동','금성면','남천동','대랑동','덕산면','동현동','두학동','명동','명지동','모산동','백운면','봉양읍','산곡동','서부동','송학면','수산면','신동','신백동','신월동','영천동','왕암동','의림동','자작동','장락동','중앙로1가',
+      '중앙로2가','천남동','청전동','청풍면','하소동','한수면','화산동','흑석동'];
+        const northchungcheong8 = ['읍/면/동','도안면','증평읍'];
+        const northchungcheong9 = ['읍/면/동','광혜원면','덕산읍','문백면','백곡면','이월면','진천읍','초평면'];
+        const northchungcheong10 = ['읍/면/동','가덕면','금천동','남문로1가','남문로2가','남일면','남주동','낭성면','대성동','명암동','문의면','문화동','미원면','방서동','북문로1가','북문로2가','북문로3가','산성동','서문동','서운동','석교동','수동','영동','영운동','용담동','용암동','용정동',
+      '운동동','월오동','지북동','탑동','평촌동'];
+        const northchungcheong11 = ['읍/면/동','개신동','남이면','모충동','미평동','분평동','사직동','사창동','산남동','성화동','수곡동','장성동','장암동','죽림동','현도면'];
+        const northchungcheong12 = ['읍/면/동','내덕동','내수읍','북이면','사천동','오동동','오창읍','외남동','외평동','외하동','우암동','율량동','정북동','정상동','정하동','주성동','주중동'];
+        const northchungcheong13 = ['읍/면/동','가경동','강내면','강서동','남촌동','내곡동','동막동','문암동','복대동','봉명동','비하동','상신동','서촌동','석곡동','석소동','송절동','송정동','수의동','신대동','신봉동','신성동','신전동','신촌동','오송읍','옥산면','외북동','운천동','원평동',
+      '정봉동','지동동','평동','향정동','현암동','화계동','휴암동'];
+        const northchungcheong14 = ['읍/면/동','가주동','교현동','금가면','금릉동','노은면','단월동','달천동','대소원면','동량면','목벌동','목행동','문화동','봉방동','산척면','살미면','성남동','성내동','성서동','소태면','수안보면','신니면','안림동','앙성면','엄정면','연수동','용관동','용두동','용산동',
+      '용탄동','종민동','주덕읍','중앙탑면','지현동','직동','충의동','충인동','칠금동','풍동','호암동'];
+
+        // const 1 = ['읍/면/동',];
+        // const 2 = ['읍/면/동',];
+        // const 3 = ['읍/면/동',];
+        // const 4 = ['읍/면/동',];
+        // const 5 = ['읍/면/동',];
+        // const 6 = ['읍/면/동',];
+        // const 7 = ['읍/면/동',];
+        // const 8 = ['읍/면/동',];
+        // const 9 = ['읍/면/동',];
+        // const 10 = ['읍/면/동',];
+        // const 11 = ['읍/면/동',];
+        // const 12 = ['읍/면/동',];
+        // const 13 = ['읍/면/동',];
+        // const 14 = ['읍/면/동',];
+
+
         let temp2 = ['읍/면/동'];
 
         const __do = document.getElementById('do').value;
@@ -585,6 +620,194 @@
           temp2 = gangwon18; 
         }
 
+       //충청북도
+       if (__do == "충청북도" && __si == "괴산군") {
+          temp2 = northchungcheong1;
+        } else if (__do == "충청북도" && __si == "단양군") {
+          temp2 = northchungcheong2;
+        } else if (__do == "충청북도" && __si == "보은군") {
+          temp2 = northchungcheong3;
+        } else if (__do == "충청북도" && __si == "영동군") {
+          temp2 = northchungcheong4;
+        } else if (__do == "충청북도" && __si == "옥천군") {
+          temp2 = northchungcheong5;
+        } else if (__do == "충청북도" && __si == "음성군") {
+          temp2 = northchungcheong6;
+        } else if (__do == "충청북도" && __si == "제천시") {
+          temp2 = northchungcheong7; 
+        } else if (__do == "충청북도" && __si == "증평군") {
+          temp2 = northchungcheong8;
+        } else if (__do == "충청북도" && __si == "진천군") {
+          temp2 = northchungcheong9; 
+        } else if (__do == "충청북도" && __si == "청주시 상당구") {
+          temp2 = northchungcheong10;
+        } else if (__do == "충청북도" && __si == "청주시 서원구") {
+          temp2 = northchungcheong11;
+        } else if (__do == "충청북도" && __si == "청주시 청원구") {
+          temp2 = northchungcheong12;
+        } else if (__do == "충청북도" && __si == "청주시 흥덕구") {
+          temp2 = northchungcheong13;
+        } else if (__do == "충청북도" && __si == "충주시") {
+          temp2 = northchungcheong14;
+        }
+
+       //충청남도
+       if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon1;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon2;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon3;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon4;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon5;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon6;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon7; 
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon8;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon9; 
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon10;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon11;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon12;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon13;
+        } else if (__do == "충청남도" && __si == "") {
+          temp2 = gangwon14;
+        }
+
+               //전라북도
+       if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla1;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla2;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla3;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla4;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla5;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla6;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla7; 
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla8;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla9; 
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla10;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla11;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla12;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla13;
+        } else if (__do == "전라북도" && __si == "") {
+          temp2 = northjeonla14;
+        }
+        
+       //전라남도
+       if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla1;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla2;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla3;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla4;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla5;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla6;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla7; 
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla8;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla9; 
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla10;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla11;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla12;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla13;
+        } else if (__do == "전라남도" && __si == "") {
+          temp2 = southjeonla14;
+        }
+
+                       //경상북도
+       if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang1;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang2;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang3;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang4;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang5;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang6;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang7; 
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang8;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang9; 
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang10;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang11;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang12;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang13;
+        } else if (__do == "경상북도" && __si == "") {
+          temp2 = northgyungsang14;
+        }
+        
+       //경상남도
+       if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang1;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang2;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang3;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang4;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang5;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang6;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang7; 
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang8;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang9; 
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang10;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang11;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang12;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang13;
+        } else if (__do == "경상남도" && __si == "") {
+          temp2 = southgyungsang14;
+        }
+
+          
+
 
         //삭제 부분
         while(_dong.hasChildNodes())
@@ -645,7 +868,7 @@
     <div class ="실거래가확인" id="bottom_center">
     <fieldset>
       <legend style="text-align:center">실거래가 확인</legend>
-      <p>(api 들어갈 부분)</p>
+      <p>(api 들어갈 부분)</p> <!--표로 데이터 삽입-->
     </fieldset>
     </div>
 
