@@ -1,7 +1,22 @@
-h1, p {
+a {
+    text-decoration: none;
+}
+
+.title_section h1 {
     text-align: center;
-  }
+}
+
+.실거래가확인 {
+    text-align: center; 
+}
+
+.title_section p {
+    text-align: center;
+}
+
+
   .center {
+      
     text-align: center;
   }
   .right {
@@ -58,13 +73,14 @@ footer {
 }
 #footer .copyright{
     float:left;
-    width: 30%;
+    width: 50%;
 }
 
 #footer .copyright p {
     font-size: 15px;
     color: #999;
     padding: -40px 0 0 40px;
+    padding-left: 60px;
 }
 
 #footer .contact{
