@@ -6,6 +6,9 @@ const xml2js = require('xml2js');
 let app = express();
 
 app.get('/index', (req, res) => {
+    var _do = req._do;
+    var _si = req._si;
+
     var url = 'http://apis.data.go.kr/1741000/StanReginCd/getStanReginCdList';
     var queryParams = '?' + encodeURIComponent('serviceKey') + '=8JvnS7XWSe2s6wWWMroPmGYFhztv2waNUOClhSjvV1T1PE0cUw2XYuoQVmsvp26Z1a5KprSeR9FXZgEs9qPfvw==';
     queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /* */
