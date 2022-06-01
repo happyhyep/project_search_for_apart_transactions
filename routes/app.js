@@ -5,13 +5,13 @@ const request = require('request');
 const xml2js = require('xml2js');
 const bodyParser = require('body-parser');
 const router = express.Router();
-let asdf = {};
+let result = {};
 
 
 router.get('/', (req, res) => {
   let info = {};
-  let _do = '서울특별시'; //req.body._do;
-  let _si = '종로구'; //req.body._si;
+  let _do =  req.body._do;
+  let _si =  req.body._si;
 
   let url = 'http://apis.data.go.kr/1741000/StanReginCd/getStanReginCdList';
   let queryParams = '?' + encodeURIComponent('serviceKey') + '=8JvnS7XWSe2s6wWWMroPmGYFhztv2waNUOClhSjvV1T1PE0cUw2XYuoQVmsvp26Z1a5KprSeR9FXZgEs9qPfvw==';
@@ -50,10 +50,10 @@ router.get('/', (req, res) => {
                 const info2 = JSON.stringify(result);
                 info = JSON.parse(info2);
                 if(info.response.body[0].totalCount[0] == 0) {
-                  asdf = {asd : "1234"};
+                  result = {};
                 }
                 else {
-                  asdf = await info.response.body[0].items[0].item.map((list) => ({
+                  result = await info.response.body[0].items[0].item.map((list) => ({
                   법정동: list['법정동'][0],
                   지번: list['지번'][0],
                   아파트: list['아파트'][0],
@@ -65,13 +65,12 @@ router.get('/', (req, res) => {
                   거래일: list['일'][0],
                   거래금액: list['거래금액'][0]
                   }))}
-                  //console.log(asdf);
                 })
                 .catch(function (err) {});
               });
             });
-            console.log(asdf);
-            res.render('test', asdf);
+            console.log(result);
+            res.render('test', result);
 });
 
 module.exports = router;
