@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>아파트 매매 실거래가 검색 웹페이지</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="select_onchangehandler.js"></script>
+    <script type="text/javascript" src="select_onchangehandler2.js"></script>
+  </head>
+
+  <body>
+
+    <section id="select화면" class="title_section">
+      <h1>아파트 매매 실거래가 검색</h1>
+      <p>아래에서 원하는 지역을 선택 후, 검색해주세요.</p>
+
+    </section>
+
+    <div class="center">
+      <select id="do" onchange="onChangeHandler()" onchange="onChangeHandler2()" style="width : 150px; height: 30px; text-align: center; font-size: 100% ;"> <!--on change : 이벤트 발생했을 때 선택할 내용-->
+        <option>시/도</option>
+        <option>서울특별시</option>
+        <option>부산광역시</option>
+        <option>대구광역시</option>
+        <option>인천광역시</option>
+        <option>광주광역시</option>
+        <option>대전광역시</option>
+        <option>울산광역시</option>
+        <option>세종특별자치시</option>
+        <option>경기도</option>
+        <option>강원도</option>
+        <option>충청북도</option>
+        <option>충청남도</option>
+        <option>전라북도</option>
+        <option>전라남도</option>
+        <option>경상북도</option>
+        <option>경상남도</option>
+        <option>제주특별자치도</option>
+      </select>
+
+      <select id="si" onchange="onChangeHandler2()" onchange="onChangeHandler()" style="width : 150px; height: 30px; text-align: center; font-size: 100% ;">
+        <option>시/군/구</option>
+      </select>
+
+      <select id="dong" style="width : 150px; height: 30px; text-align: center; font-size: 100% ;">
+        <option>읍/면/동</option>
+      </select>
+
+    <button onclick="printCountry()" style="width : 50px; height: 30px; text-align: center; font-size: 100% ;">검색</button>
+    <div id="new"></div>
+    </div>
+
+    <div class ="실거래가확인" id="bottom_center">
+    <fieldset>
+      <legend style="text-align:center">실거래가 확인</legend>
+      <p>(api 들어갈 부분)</p> <!--표로 데이터 삽입-->
+    </fieldset>
+    </div>
+
+
+    <footer id="footer">
+      <nav style="text-align:right ; padding-right: 100px; font-size: 20px; padding-top: 13px; color: rgb(40, 40, 40);">
+        <b>2022 오픈소스SW개발 프로젝트</b> | <a href='http://khuhub.khu.ac.kr/2021105641/search_for_apartment_transactions.git' target='_blank'>khuhub</a>
+      </nav>
+      <div class="copyright">
+        <p >source of information : 국토교통부_아파트매매 실거래 상세 자료</p>
+        <p >Copyright 2022. Jeonghyein&Sonsumin. All Rights Reserved.</p>
+      </div>
+      <div class="contact">
+        
+        <p>2021105641 정혜인 | jhi2359@khu.ac.kr</p>
+        <p>2021105609 손수민 | breath12@khu.ac.kr</p>
+      </div>
+  </footer>
+  </body>
+</html>
