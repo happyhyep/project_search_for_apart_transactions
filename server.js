@@ -6,7 +6,16 @@ const xml2js = require('xml2js');
 const bodyParser = require('body-parser');
 const route = require('./routes/app');
 
+
+//var ejs = require("ejs");
+
 let app = express();
+
+//app.set("views", __dirname + "/views");     
+//app.set("view engine", "ejs");
+//app.engine("html", ejs.renderFile);
+//app.use(express.static("public"));
+
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
