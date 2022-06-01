@@ -5,7 +5,7 @@ const request = require('request');
 const xml2js = require('xml2js');
 const bodyParser = require('body-parser');
 const router = express.Router();
-let result = {};
+let apart = [];
 
 
 router.get('/', (req, res) => {
@@ -28,32 +28,31 @@ router.get('/', (req, res) => {
       // console.log('Headers', JSON.stringify(response.headers));
       // console.log('Reponse received', body);
 
-      const code = JSON.parse(body);
-      let region2 = code.StanReginCd[1].row[0].region_cd;
-      let region = region2.substr(0,5);
+      // const code = JSON.parse(body);
+      // let region2 = code.StanReginCd[1].row[0].region_cd;
+      // let region = region2.substr(0,5);
   
       let url = 'http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTrade';
       let queryParams = '?' + encodeURIComponent('serviceKey') + '=8JvnS7XWSe2s6wWWMroPmGYFhztv2waNUOClhSjvV1T1PE0cUw2XYuoQVmsvp26Z1a5KprSeR9FXZgEs9qPfvw==';
-      queryParams += '&' + encodeURIComponent('LAWD_CD') + '=' + encodeURIComponent(region);
-      queryParams += '&' + encodeURIComponent('DEAL_YMD') + '=' + encodeURIComponent('202112');
+      queryParams += '&' + encodeURIComponent('LAWD_CD') + '=' + encodeURIComponent("11110");
+      queryParams += '&' + encodeURIComponent('DEAL_YMD') + '=' + encodeURIComponent('201512');
       
-
       request(
           {
             url: url + queryParams,
             method: 'GET',
           },
-          async function (error, response, body) {
+          function (error, response, body) {
             const parser = new xml2js.Parser();
 
             parser.parseStringPromise(body).then(async function (result) {
                 const info2 = JSON.stringify(result);
                 info = JSON.parse(info2);
                 if(info.response.body[0].totalCount[0] == 0) {
-                  result = {};
+                  apart = {};
                 }
                 else {
-                  result = await info.response.body[0].items[0].item.map((list) => ({
+                  apart = await info.response.body[0].items[0].item.map((list) => ({
                   법정동: list['법정동'][0],
                   지번: list['지번'][0],
                   아파트: list['아파트'][0],
@@ -64,13 +63,16 @@ router.get('/', (req, res) => {
                   거래월: list['월'][0],
                   거래일: list['일'][0],
                   거래금액: list['거래금액'][0]
-                  }))}
-                })
+                  }))
+                }
+            })
                 .catch(function (err) {});
               });
             });
-            console.log(result);
-            res.render('test', result);
+            console.log(typeof apart);
+            res.render('select', {
+              result:apart
+            });
 });
 
 module.exports = router;
