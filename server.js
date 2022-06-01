@@ -1,13 +1,26 @@
-// server.js
+const express = require('express');
+const path = require('path');
+const convert = require('xml-js');
+const request = require('request');
+const xml2js = require('xml2js');
+const bodyParser = require('body-parser');
+const route = require('./routes/app');
 
-var express = require('express')
-var app = express()
-var port = app.listen(process.env.PORT || 5050);
+let app = express();
 
-app.get('/', function(req, res) {
-    res.send("<h1>Express server Start</h1>")
-})
+app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extends: true }));
 
-app.listen(port, function() {
-    console.log('start! express server');
-})
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use('/', route); // http://localhost:8080/ 이 주소로 들어갔을 때 app.js를 실행시켜라
+
+app.listen(8080, function (err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('listen:8080');
+  }
+});
