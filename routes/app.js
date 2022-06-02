@@ -5,13 +5,13 @@ const request = require('request');
 const xml2js = require('xml2js');
 const bodyParser = require('body-parser');
 const router = express.Router();
-let result = {};
+let apart = {};
 
 
 router.get('/', (req, res) => {
   let info = {};
-  let _do =  req.body._do;
-  let _si =  req.body._si;
+  let _do = req.body._do;
+  let _si = req.body._si;
 
   let url = 'http://apis.data.go.kr/1741000/StanReginCd/getStanReginCdList';
   let queryParams = '?' + encodeURIComponent('serviceKey') + '=8JvnS7XWSe2s6wWWMroPmGYFhztv2waNUOClhSjvV1T1PE0cUw2XYuoQVmsvp26Z1a5KprSeR9FXZgEs9qPfvw==';
@@ -46,14 +46,14 @@ router.get('/', (req, res) => {
           async function (error, response, body) {
             const parser = new xml2js.Parser();
 
-            parser.parseStringPromise(body).then(async function (result) {
-                const info2 = JSON.stringify(result);
+            parser.parseStringPromise(body).then(async function (apart) {
+                const info2 = JSON.stringify(apart);
                 info = JSON.parse(info2);
                 if(info.response.body[0].totalCount[0] == 0) {
-                  result = {};
+                  apart = {};
                 }
                 else {
-                  result = await info.response.body[0].items[0].item.map((list) => ({
+                  apart = await info.response.body[0].items[0].item.map((list) => ({
                   법정동: list['법정동'][0],
                   지번: list['지번'][0],
                   아파트: list['아파트'][0],
@@ -65,12 +65,15 @@ router.get('/', (req, res) => {
                   거래일: list['일'][0],
                   거래금액: list['거래금액'][0]
                   }))}
+                  console.log(apart);
+                  res.render('select', {
+                    result:apart
+                  });
                 })
                 .catch(function (err) {});
               });
             });
-            console.log(result);
-            res.render('test', result);
+            
 });
 
 module.exports = router;
