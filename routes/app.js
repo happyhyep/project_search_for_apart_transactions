@@ -1,20 +1,22 @@
+require("dotenv").config();
 const express = require('express');
 const path = require('path');
 const convert = require('xml-js');
 const request = require('request');
 const xml2js = require('xml2js');
 const bodyParser = require('body-parser');
+const { processors } = require("xml2js");
 const router = express.Router();
 let apart = {};
 
 
 router.get('/', (req, res) => {
   let info = {};
-  let _do = req.body._do;
-  let _si = req.body._si;
+  let _do =  req.body._do;
+  let _si =  req.body._si;
 
   let url = 'http://apis.data.go.kr/1741000/StanReginCd/getStanReginCdList';
-  let queryParams = '?' + encodeURIComponent('serviceKey') + '=8JvnS7XWSe2s6wWWMroPmGYFhztv2waNUOClhSjvV1T1PE0cUw2XYuoQVmsvp26Z1a5KprSeR9FXZgEs9qPfvw==';
+  let queryParams = '?' + encodeURIComponent('serviceKey') + process.env.SERVICE_KEY; // 서비스키 입력
   queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1');
   queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('3');
   queryParams += '&' + encodeURIComponent('type') + '=' + encodeURIComponent('json');
@@ -31,23 +33,23 @@ router.get('/', (req, res) => {
       const code = JSON.parse(body);
       let region2 = code.StanReginCd[1].row[0].region_cd;
       let region = region2.substr(0,5);
-  
-      let url = 'http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTrade';
-      let queryParams = '?' + encodeURIComponent('serviceKey') + '=8JvnS7XWSe2s6wWWMroPmGYFhztv2waNUOClhSjvV1T1PE0cUw2XYuoQVmsvp26Z1a5KprSeR9FXZgEs9qPfvw==';
-      queryParams += '&' + encodeURIComponent('LAWD_CD') + '=' + encodeURIComponent(region);
-      queryParams += '&' + encodeURIComponent('DEAL_YMD') + '=' + encodeURIComponent('202112');
+      console.log(region);
       
-
+      let url = 'http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTrade'; 
+      let queryParams = '?' + encodeURIComponent('serviceKey') + process.env.SERVICE_KEY; // 서비스키 입력
+      queryParams += '&' + encodeURIComponent('LAWD_CD') + '=' + encodeURIComponent(region);
+      queryParams += '&' + encodeURIComponent('DEAL_YMD') + '=' + encodeURIComponent('201512');
+      
       request(
           {
             url: url + queryParams,
             method: 'GET',
           },
-          async function (error, response, body) {
+          function (error, response, body) {
             const parser = new xml2js.Parser();
 
-            parser.parseStringPromise(body).then(async function (apart) {
-                const info2 = JSON.stringify(apart);
+            parser.parseStringPromise(body).then(async function (result) {
+                const info2 = JSON.stringify(result);
                 info = JSON.parse(info2);
                 if(info.response.body[0].totalCount[0] == 0) {
                   apart = {};
@@ -64,16 +66,16 @@ router.get('/', (req, res) => {
                   거래월: list['월'][0],
                   거래일: list['일'][0],
                   거래금액: list['거래금액'][0]
-                  }))}
-                  console.log(apart);
-                  res.render('select', {
-                    result:apart
-                  });
-                })
+                  }))
+                }
+            })
                 .catch(function (err) {});
               });
             });
-            
+            console.log(typeof apart);
+            res.render('select', {
+              result:apart
+            });
 });
 
 module.exports = router;
