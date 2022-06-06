@@ -19,16 +19,40 @@
 <br>
 
 # Getting Started (Installation)
+1. node.js 설치
+2. .env
+  'SERVICE_KEY={YOUR_SERVICE_KEY}'
 
-# Usage
+3. ```git clone http://khuhub.khu.ac.kr/2021105641/search_for_apartment_transactions.git```
+4. 
+   ```
+   npm install express
+   npm install path
+   npm install xml-js
+   npm install request
+   npm install xml2js
+   npm install npm install ejs path body-parser
+   ```
+5. 실행하기<br>
+   ```node server.js```
+6. url 검색<br>
+   localhost:8080/
 
 # Roadmap
 
 # Contributing
+프로젝트에 기여하고 싶으신 분들은 아래 절차를 따라주시기 바랍니다.
+```
+    1. 프로젝트 fork
+    2. feature branch 생성 (git checkout -b feature/name)
+    3. commit (git commit -m "Add feature)
+    4. push (git push origin feature/name)
+    5. pull request 생성
+```
 
 # License
 '아파트 매매 실거래가 검색 웹페이지' 프로젝트는 MIT License에 따라 배포됩니다.
-자세한 내용은 '''LICENSE.txt'''를 참고해주십시오.
+자세한 내용은 ```LICENSE.txt```를 참고해주십시오.
 
 
 source of information : 국토교통부_아파트매매 실거래 상세 자료
