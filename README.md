@@ -1,3 +1,15 @@
+  #### Contents
+  
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#Getting Started (Installation)">Getting Started</a></li>
+    <li><a href="#Roadmap">Roadmap</a></li>
+    <li><a href="#Contributing">Contributing</a></li>
+    <li><a href="#Data source">Data source</a></li>
+    <li><a href="#License">License</a></li>
+    <li><a href="#Contact">Contact</a></li>
+  </ol>
+
 # About the project
 
 
@@ -48,8 +60,11 @@
     3. commit (git commit -m "Add feature)
     4. push (git push origin feature/name)
     5. pull request 생성
-```
+    
+    Pull request는 최대한 빨리 확인하도록 하겠습니다. 
 
+```
+    pull request 포함 문의사항은 [📧contact](#contact) 으로 연락 부탁드립니다.
 # License
 '아파트 매매 실거래가 검색 웹페이지' 프로젝트는 MIT License에 따라 배포됩니다.
 자세한 내용은 ```LICENSE.txt```를 참고해주십시오.
