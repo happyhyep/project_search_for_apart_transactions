@@ -2,12 +2,12 @@
   
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#Getting Started (Installation)">Getting Started</a></li>
-    <li><a href="#Roadmap">Roadmap</a></li>
-    <li><a href="#Contributing">Contributing</a></li>
-    <li><a href="#Data source">Data source</a></li>
-    <li><a href="#License">License</a></li>
-    <li><a href="#Contact">Contact</a></li>
+    <li><a href="#getting-startedinstallation">Getting Started</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#data-source">Data source</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 
 # About the project
