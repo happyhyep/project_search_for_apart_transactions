@@ -27,11 +27,13 @@
 # Contributing
 
 # License
-----------
 '아파트 매매 실거래가 검색 웹페이지' 프로젝트는 MIT License에 따라 배포됩니다.
 자세한 내용은 '''LICENSE.txt'''를 참고해주십시오.
 
+
+source of information : 국토교통부_아파트매매 실거래 상세 자료
+Copyright 2022. Jeonghyein&Sonsumin. All Rights Reserved.
+
 # Contact
-----------
 - 2021105641 정혜인 | jhi2359@khu.ac.kr
 - 2021105609 손수민 | breath12@khu.ac.kr
