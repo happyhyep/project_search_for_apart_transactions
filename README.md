@@ -32,3 +32,6 @@
 자세한 내용은 '''LICENSE.txt'''를 참고해주십시오.
 
 # Contact
+----------
+- 2021105641 정혜인 | jhi2359@khu.ac.kr
+- 2021105609 손수민 | breath12@khu.ac.kr
