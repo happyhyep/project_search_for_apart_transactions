@@ -135,7 +135,7 @@
 
     const _do = document.getElementById('do').value; //첫 번째 select의 value를 가져옴 -> 이의 변화에 따라 다른 select에 영향을 줌.
     const _si = document.getElementById('si'); //영향을 받을 si select의 위치를 갖고옴.
-
+    let value_do = {value : _do}
     if (_do == "서울특별시") {
       temp = seoul;
     } else if (_do == "부산광역시") {
@@ -197,7 +197,9 @@
       newOption.innerHTML = temp[idx]; 
       _si.appendChild(newOption); // si에 추가
     }
+    return _do;
   };
+
     </script>
     <script> //onChangeHandler2
     const onChangeHandler2 = () => {
@@ -1136,15 +1138,32 @@
       newOption.innerHTML = temp2[idx]; 
       _dong.appendChild(newOption); 
     }
+    return __si;
   };
+  //const value_si = e.options[e.selectedIndex].text;
+
     </script>
     <script> //printCountry
-    const res = require("express/lib/response");
 
-const printCountry = () => {
-    const res = fetch("http://localhost:8080/printCountry")
-    .then((res) => document.getElementById('data') = res.data[0])
-    document.getElementById('data') = res
+    const printCountry = async() => {
+      console.log(document.getElementById('do').value);
+      console.log(document.getElementById('si').value);
+    const res = await fetch(`http://localhost:8080/printCountry/${document.getElementById('do').value}/${document.getElementById('si').value}`);
+    console.log(res);
+
+
+
+    // document.getElementById('data') = res;
+    // const _do = onChangeHandlerBind();
+    // axios.post("http://localhost:8080/printCountry", { _do }).then((res) => {console.log(res)});
+
+    
+//    response.get('/',(req,res) => {
+//   res.send(onChangeHandler());
+//   res.send(onChangeHandler2());
+// })
+    // value = document.getElementById('data');
+    // value.innerHTML = res.data[0];
   const tb = document.getElementById('tb');
   const newRow = tb.insertRow();
 
@@ -1153,17 +1172,19 @@ for (let i = 0; i < res.length; i++) {
     const newTR = document.createElement('tr');
     const newApartTD = document.createElement('td');
     const newPriceTD = document.createElement('td');
-    newApartTD.innerHTML = res[i].아파트;
-    newPriceTD.innerHTML = res[i].가격;
+    newApartTD.innerHTML = res.아파트;
+    console.log(newApartTD);
+    newPriceTD.innerHTML = res.거래금액;
     newTR.appendChild(newApartTD);
     newTR.appendChild(newPriceTD);
     tableId.appendChild(newTR);
   }
-};
+
+
+ };
 
 
     </script>
-
   </head>
 
   <body>
@@ -1175,7 +1196,7 @@ for (let i = 0; i < res.length; i++) {
     </section>
 
     <div class="center">
-      <select id="do" onchange="onChangeHandler()" onchange="onChangeHandler2()" style="width : 150px; height: 30px; text-align: center; font-size: 100% ;"> <!--on change : 이벤트 발생했을 때 선택할 내용-->
+      <select id="do" onchange="onChangeHandler()"  style="width : 150px; height: 30px; text-align: center; font-size: 100% ;"> <!--on change : 이벤트 발생했을 때 선택할 내용-->
         <option>시/도</option>
         <option>서울특별시</option>
         <option>부산광역시</option>
@@ -1196,7 +1217,7 @@ for (let i = 0; i < res.length; i++) {
         <option>제주특별자치도</option>
       </select>
 
-      <select id="si" onchange="onChangeHandler2()" onchange="onChangeHandler()" style="width : 150px; height: 30px; text-align: center; font-size: 100% ;">
+      <select id="si" onchange="onChangeHandler2()"  style="width : 150px; height: 30px; text-align: center; font-size: 100% ;">
         <option>시/군/구</option>
       </select>
 
@@ -1213,8 +1234,11 @@ for (let i = 0; i < res.length; i++) {
       <legend style="text-align:center">실거래가 확인</legend>
       <p id="data"></p>
       <table id="tb">
-      </table>
+      </table>d
+      <%= console.log(result[0]) %>
+      <%= console.log(result[0]) %>
     </fieldset>
+
     </div>
 
 
