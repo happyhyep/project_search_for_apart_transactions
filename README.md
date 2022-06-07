@@ -44,6 +44,7 @@
    npm install request
    npm install xml2js
    npm install npm install ejs path body-parser
+   npm i -save dotenv
    ```
 5. 실행하기<br>
    ```node server.js```
