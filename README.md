@@ -3,6 +3,7 @@
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#getting-startedinstallation">Getting Started</a></li>
+    <li><a href="#usage">Usage</a></li> 
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#data-source">Data source</a></li>
@@ -51,7 +52,19 @@
 6. url 검색<br>
    localhost:8080/
 
+# Usage
+
 # Roadmap
++ 지역선택 select 함수로 구현 (시/도, 시/군/구, 읍/면/동 직접 리스트로 입력)
++ 국토교통부_아파트매매 실거래 상세 자료 API 연결
++ backend-frontend 연결 (router, get, post 등 이용)
++ /printCountry로 실거래가 확인 페이지 구현
++ 지역 검색 시 실거래가 확인 데이터 table로 구현
++ 가독성을 위해 아파트 이름 순으로 table 정렬
++ 아파트 이름 클릭 시 부동산 사이트로 하이퍼링크 연결 구현
++ footer 구현 (khuhub 연결 하이퍼링크)
++ css 구현
++ AWS로 배포
 
 # Contributing
 프로젝트에 기여하고 싶으신 분들은 아래 절차를 따라주시기 바랍니다.
