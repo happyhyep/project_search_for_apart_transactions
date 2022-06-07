@@ -1,0 +1,97 @@
+a {
+    text-decoration: none;
+}
+
+.title_section h1 {
+    text-align: center;
+}
+
+.실거래가확인 {
+    text-align: center; 
+}
+
+.title_section p {
+    text-align: center;
+}
+
+
+  .center {
+      
+    text-align: center;
+  }
+  .right {
+    text-align: right;
+  }
+  .end {
+    text-align: end;
+  }
+
+#select화면 h1{
+    clear: both;
+	width: 100%;
+	height: 80px;
+    line-height: 80px;  
+    background-color: #ededed;
+    font-size: 30px;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+div#bottom_center{
+    /*display: flex;*/
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    padding: -50%;
+    margin: 0 auto;
+}
+
+.no_dot_list{
+    list-style: none;
+    padding-left: 0px;
+}
+
+body{
+    overflow:hidden;
+    height: 100%;
+}
+
+footer {
+    clear: both;
+	width: 100%;
+	height: 130px;
+	bottom: 0px;
+	position: absolute;
+    background-color: #f9f9f9;
+}
+
+#footer .footer_title{
+    float:left;
+    width: 30%; 
+}
+#footer .copyright{
+    float:left;
+    width: 50%;
+}
+
+#footer .copyright p {
+    font-size: 15px;
+    color: #999;
+    padding: -40px 0 0 40px;
+    padding-left: 60px;
+}
+
+#footer .contact{
+    float:right;
+    width: 30%;
+}
+
+#footer .contact p {
+    font-size: 15px;
+    color: #999;
+    padding: -40px 0 0 0;
+    text-align: right;
+    padding-right: 100px;
+}

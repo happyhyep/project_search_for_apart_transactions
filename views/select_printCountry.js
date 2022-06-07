@@ -1,21 +1,22 @@
-//const res = require("express/lib/response");
+const res = require("express/lib/response");
 
 const printCountry = () => {
-    //const res = fetch("http://localhost:8080/printCountry")
-    const res = [
-        {
-          아파트: '꿈에그린',
-          가격: '10',
-          집주인: '김진우',
-        },
-        {
-          아파트: '래미안',
-          가격: '1',
-          집주인: '강병호',
-        },
-      ];
-    //.then((res) => document.getElementById('data') = res.data[0])
-    //document.getElementById('data') = res
+    const res = fetch("http://localhost:8080/printCountry")
+    .then((res) => document.getElementById('data') = res.data[0])
+    document.getElementById('data') = res
+    // const res = [
+    //     {
+    //       아파트: '꿈에그린',
+    //       가격: '10',
+    //       집주인: '김진우',
+    //     },
+    //     {
+    //       아파트: '래미안',
+    //       가격: '1',
+    //       집주인: '강병호',
+    //     },
+    //   ];
+
 const tb = document.getElementById('tb');
 const newRow = tb.insertRow();
 
