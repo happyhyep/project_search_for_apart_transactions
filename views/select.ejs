@@ -10,8 +10,22 @@
     <script type="text/javascript" src="select_printCountry.js"></script> -->
 
     <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Gugi&family=Hi+Melody&family=Nanum+Gothic&display=swap');
       a {
         text-decoration: none;
+      }
+      a:link {
+      color : #c6993a;
+      }
+      a:visited {
+        color : #c6993a;
+      }
+      a:hover {
+        color : rgb(255, 99, 72);
+      }
+      a:active {
+        color : rgb(38, 139, 27)
       }
 
       .title_section h1 {
@@ -38,15 +52,16 @@
 
       #select화면 h1 {
         clear: both;
-        width: 100%;
-        height: 80px;
-        line-height: 80px;
-        background-color: #ededed;
-        font-size: 30px;
+        width: 480px;
+        height: 100px;
+        line-height: 100px;
+        background-color: #f8ce84eb;
+        font-size: 35px;
+        border-radius: 1em;
       }
 
       body {
-        background-color: rgb(255, 255, 255);
+        background-color: #ffffff;
       }
 
       div#bottom_center {
@@ -54,7 +69,7 @@
         height: 70vh;
         justify-content: center;
         align-items: center;
-        padding: -50%;
+        padding: -70%;
         margin: 0 auto;
       }
 
@@ -84,6 +99,8 @@
       #footer .copyright {
         float: left;
         width: 50%;
+        font-family: 'Gowun Dodum', sans-serif ;
+        font-size:15px; font-weight: bold;
       }
 
       #footer .copyright p {
@@ -91,11 +108,15 @@
         color: #999;
         padding: -40px 0 0 40px;
         padding-left: 60px;
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size:15px; font-weight: bold;
       }
 
       #footer .contact {
         float: right;
         width: 30%;
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size:15px; font-weight: bold;
       }
 
       #footer .contact p {
@@ -104,33 +125,48 @@
         padding: -40px 0 0 0;
         text-align: right;
         padding-right: 100px;
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size:15px; font-weight: bold;
       }
 
       .aparttable {
         margin: 0 auto;
         border-radius: 10%;
+        
       }
 
       th {
-        font-size : 20px;
-        padding-left : 5px;
-        padding-right : 5px;
+        font-size : 25px;
+        padding-left : 30px;
+        padding-right : 30px;
+        
+        font-weight: bold; 
       }
       
       td {
-        padding-top: 10px;
+        background: #fbf4e7;
+        border-radius: 0.2em;
+        height: 35px;
+        font-size: 18px;
       }
 
       thead {
-        background: #999;
+        background: #f8e1b9;
+        
       }
 
       fieldset {
-        margin-top : 20px;
+        margin: 0 auto;
+        margin-top : 50px;
         overflow-y:auto;
-         overflow-x:hidden;
-          width:100%;
-           height:580px;
+        overflow-x:hidden;
+        width:90%;
+        height:700px;
+        border-radius: 1.5em;
+        text-align: center; font-family: 'Gowun Dodum', sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        border-color: #bd7904;
       }
 
     </style>
@@ -6789,9 +6825,11 @@
   </head>
 
   <body>
-    <section id="select화면" class="title_section">
-      <h1>아파트 매매 실거래가 검색</h1>
-      <p>아래에서 원하는 지역을 선택 후, 검색해주세요.</p>
+    <section id="select화면" class="title_section" style="margin-top: 50px;">
+      <p style="font-family: 'Gowun Dodum', sans-serif; font-size:18px; margin-bottom: 1mm;"  >KHU CSE 오픈소스SW개발 프로젝트</p>
+      <h1 style="font-family: 'Gugi', cursive; margin: 0 auto;">아파트 매매 실거래가 검색</h1>
+      <p style="font-family: 'Gowun Dodum', sans-serif; font-size:20px; font-weight: bold;"  >아래에서 원하는 지역을 선택 후, 검색해주세요.</p>
+      <p style="font-family: 'Hi Melody', cursive; font-size:20px; color: rgb(50, 50, 50); font-weight: 550;">아파트 이름을 클릭하면 부동산 페이지로 연결됩니다.</p>
     </section>
 
     <div class="center">
@@ -6802,9 +6840,11 @@
           onchange="onChangeHandler()"
           style="
             width: 150px;
-            height: 30px;
+            height: 33px;
             text-align: center;
-            font-size: 100%;
+            font-size: 20px;
+            font-family: 'Gowun Dodum', sans-serif;
+            font-weight: bold;
           "
         >
           <!--on change : 이벤트 발생했을 때 선택할 내용-->
@@ -6828,35 +6868,41 @@
           <option>제주특별자치도</option>
         </select>
 
-        <select
+        <select 
           id="si"
           name="sisi"
           onchange="onChangeHandler2()"
           style="
+            margin-left:7px;
             width: 150px;
-            height: 30px;
+            height: 33px;
             text-align: center;
-            font-size: 100%;
+            font-size: 20px;
+            font-family: 'Gowun Dodum', sans-serif;
+            font-weight: bold;
           "
         >
           <option>시/군/구</option>
         </select>
 
-        <select
+        <select 
           id="dong"
           style="
+            margin-left:7px;
             width: 150px;
-            height: 30px;
+            height: 33px;
             text-align: center;
-            font-size: 100%;
+            font-size: 20px;
+            font-family: 'Gowun Dodum', sans-serif;
+            font-weight: bold;
           "
         >
           <option>읍/면/동</option>
         </select>
 
-        <button
+        <button 
           type="submit"
-          style="width: 50px; height: 30px; text-align: center; font-size: 100%"
+          style="margin-left:10px; width: 60px; height: 33px; text-align: center; font-size: 122%; font-family: 'Gowun Dodum', sans-serif; font-weight: bold;"
         >
           검색
         </button>
@@ -6867,28 +6913,28 @@
 
     <div class="실거래가확인" id="bottom_center">
       <fieldset>
-        <legend style="text-align: center">실거래가 확인</legend>
+        <legend style="width: 20%;">실거래가 확인</legend>
         <p id="data"></p>
         <table id="tb" class="aparttable">
-          <thead>
+          <thead style="font-family: 'Gowun Dodum', sans-serif;">
 
-            <th>
+            <th style="border-radius: 0.2em;">
               거래금액
             </th>
-            <th>
+            <th style="border-radius: 0.2em;">
               건축년도
             </th>
-            <th>
+            <th style="border-radius: 0.2em;">
               아파트
             </th>
-            <th>
+            <th style="border-radius: 0.2em;">
               전용면적
             </th>
-            <th>
+            <th style="border-radius: 0.2em;">
               지번
             </th>
           </thead>
-          <tbody>
+          <tbody style="font-family: 'Gowun Dodum', sans-serif;">
   
             <% if (result.length ==0) { %>
               <% } %> 
@@ -6905,7 +6951,7 @@
   
                   <td><%= list.거래금액; %> </td>
                   <td><%= list.건축년도; %> </td>
-                  <td><%= list.아파트; %> </td>
+                  <td><a target="_blank" href="https://hogangnono.com/search?q=<%= list.아파트; %>"><%= list.아파트; %> </a></td>
                   <td><%= list.전용면적; %> </td>
                   <td><%= list.지번; %> </td>
                 </tr>
@@ -6916,7 +6962,7 @@
       </fieldset>
     </div>
 
-    <footer id="footer">
+    <footer id="footer" >
       <nav
         style="
           text-align: right;
@@ -6924,13 +6970,15 @@
           font-size: 20px;
           padding-top: 13px;
           color: rgb(40, 40, 40);
+          font-family: 'Gowun Dodum', sans-serif;
+          font-size:20px; font-weight: bold;
         "
       >
         <b>2022 오픈소스SW개발 프로젝트</b> |
         <a
           href="http://khuhub.khu.ac.kr/2021105641/search_for_apartment_transactions.git"
           target="_blank"
-          >khuhub</a
+          >KHUHUB</a
         >
       </nav>
       <div class="copyright">
