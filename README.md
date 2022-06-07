@@ -60,6 +60,20 @@
    localhost:8080/
 
 # Usage
+<div align="center">
+<h5>간략한 기능 안내</h5>
+<img src="/uploads/ee5c928eabc7e5ec4b0f0383ee2eb3e0/슬라이드1.JPG" width="1000"></img>
+<h5>지역 선택 기능</h5>
+<img src="/uploads/30d22ccfcaccd0e267ba13d4bde23f00/슬라이드2.JPG" width="1000"></img>
+<h5>실거래가 확인</h5>
+<img src="/uploads/3741d1237c27a5a148a3568cca7d2bb7/슬라이드3.JPG" width="1000"></img>
+<h5>‘아파트’ 하이퍼링크</h5>
+<img src="/uploads/93a6462b2069457d70a6ac20f847c73b/슬라이드4.JPG" width="1000"></img>
+<h5>부동산 페이지 접속</h5>
+<img src="/uploads/a6599f5dd4015de2cca7dc913f147dc6/슬라이드5.JPG" width="1000"></img>
+<h5>부동산 페이지 상세 정보 확인</h5>
+<img src="/uploads/d795e6f91d7efed2a5b3bda6c54b4b2f/슬라이드6.JPG" width="1000"></img>
+</div>
 
 # Roadmap
 + 지역선택 select 함수로 구현 (시/도, 시/군/구, 읍/면/동 직접 리스트로 입력)
