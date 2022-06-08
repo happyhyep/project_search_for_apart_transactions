@@ -1,8 +1,6 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const convert = require('xml-js');
-const request = require('request');
-const xml2js = require('xml2js');
 const bodyParser = require('body-parser');
 const route = require('./routes/app');
 
@@ -19,7 +17,7 @@ app.set('view engine', 'ejs');
 
 require("dotenv").config();
 
-app.use('/', route); // http://localhost:8080/ 이 주소로 들어갔을 때 app.js를 실행시켜라
+app.use('/', route);
 
 app.listen(8080, function (err) {
   if (err) {
