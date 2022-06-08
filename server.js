@@ -14,9 +14,7 @@ app.use(bodyParser.urlencoded({ extends: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-require("dotenv").config();
-
-app.use('/', route);
+app.use('/', route); // http://localhost:8080/ 이 주소로 들어갔을 때 app.js를 실행시켜라
 
 app.listen(8080, function (err) {
   if (err) {
