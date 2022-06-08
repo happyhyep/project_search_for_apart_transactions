@@ -2,6 +2,7 @@
     <img src="/uploads/ccd200caef406a8354f1f0d7b99ba63a/logo.jpg" width="150">
     <h3 align="center">Search For Apartment Transactions</h3>
     <p align="center">원하는 아파트의 실거래가를 알려드립니다 !</p>
+    <a href="http://2021105609.osschatbot2022.ml:23023/">링크 바로가기 (서버가 열려있을 때만 접속 가능합니다)</a>
 </div>
 <br>
 #### Contents
@@ -75,6 +76,7 @@
 <h5>구현 영상확인</h5>
 <img src="/uploads/d5233d8bdf6d110c57c5d13a157b38d7/2022-06-09_02-23-50.mp4"></img>
 </div>
+
 
 # Roadmap
 + 지역선택 select 함수로 구현 (시/도, 시/군/구, 읍/면/동 직접 리스트로 입력)
