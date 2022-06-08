@@ -72,6 +72,8 @@
 <img src="/uploads/a6599f5dd4015de2cca7dc913f147dc6/슬라이드5.JPG" width="1000"></img>
 <h5>부동산 페이지 상세 정보 확인</h5>
 <img src="/uploads/d795e6f91d7efed2a5b3bda6c54b4b2f/슬라이드6.JPG" width="1000"></img>
+<h5>구현 영상확인</h5>
+<img src="/uploads/d5233d8bdf6d110c57c5d13a157b38d7/2022-06-09_02-23-50.mp4" width="1000"></img>
 </div>
 
 # Roadmap
