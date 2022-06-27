@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="/uploads/ccd200caef406a8354f1f0d7b99ba63a/logo.jpg" width="150">
+    <img src="https://user-images.githubusercontent.com/103382269/175991550-b8b23caa-3525-400d-a5b6-e02a25d4f8c3.jpg" width="150">
     <h3 align="center">Search For Apartment Transactions</h3>
     <p align="center">원하는 아파트의 실거래가를 알려드립니다 !</p>
     <a href="http://2021105609.osschatbot2022.ml:23023/">링크 바로가기 (서버가 열려있을 때만 접속 가능합니다)</a>
