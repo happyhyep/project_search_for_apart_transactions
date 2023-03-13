@@ -112,5 +112,5 @@ source of information : 국토교통부_아파트매매 실거래 상세 자료
 Copyright 2022. Jeonghyein&Sonsumin. All Rights Reserved.
 
 # Contact
-- 2021105641 정혜인 | jhi2359@khu.ac.kr
-- 2021105609 손수민 | breath12@khu.ac.kr
+- Frontend 정혜인 | jhi2359@khu.ac.kr
+- Backend 손수민 | breath12@khu.ac.kr
